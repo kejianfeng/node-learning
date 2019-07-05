@@ -73,10 +73,11 @@ fs.readFile('./dir2/test.js',  'utf-8', (err, data) => {
 	console.log(data);
 })
 */
-fs.readdir('./dir2/test.js', 'utf-8' ,  (err, file) => {
-	// const buf = Buffer.from(data, 'ascii');
-	console.log(file);
+
+fs.stat("./dir2/test.js", (err, stats) => {
+	console.log(stats.size);
 })
+
 
 
 
